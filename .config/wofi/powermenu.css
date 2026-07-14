@@ -1,0 +1,53 @@
+window {
+    background-color: rgba(13, 20, 17, 0.95);
+    border: 2px solid #73ba25;
+    border-radius: 12px;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+}
+
+/* Power menu only: collapse the search entry instead of using wofi's
+   --hide-search, which in this wofi version only renders the first
+   matching item and leaves the rest of the window blank. */
+#input, #input * {
+    min-height: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    caret-color: transparent;
+    font-size: 0;
+    opacity: 0;
+}
+
+#inner-box {
+    margin: 6px;
+}
+
+#outer-box {
+    margin: 4px;
+}
+
+#scroll {
+    margin: 4px;
+}
+
+#text {
+    color: #e8e8e8;
+}
+
+#entry {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#entry:selected {
+    background: linear-gradient(45deg, #73ba25, #2fae87);
+}
+
+#entry:selected #text {
+    color: #0d1411;
+    font-weight: 600;
+}

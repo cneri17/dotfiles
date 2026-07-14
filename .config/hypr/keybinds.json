@@ -1,0 +1,368 @@
+[
+  {
+    "combo": "SUPER + Return",
+    "dispatcher": "hl.dsp.exec_cmd(\"kitty\")",
+    "opts": "",
+    "desc": "Open terminal"
+  },
+  {
+    "combo": "SUPER + D",
+    "dispatcher": "hl.dsp.exec_cmd(\"wofi --show drun\")",
+    "opts": "",
+    "desc": "App launcher"
+  },
+  {
+    "combo": "SUPER + E",
+    "dispatcher": "hl.dsp.exec_cmd(\"kitty -e yazi\")",
+    "opts": "",
+    "desc": "File manager"
+  },
+  {
+    "combo": "SUPER + B",
+    "dispatcher": "hl.dsp.exec_cmd(\"google-chrome\")",
+    "opts": "",
+    "desc": "Browser"
+  },
+  {
+    "combo": "SUPER + Q",
+    "dispatcher": "hl.dsp.window.close()",
+    "opts": "",
+    "desc": "Close window"
+  },
+  {
+    "combo": "SUPER + SHIFT + Q",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/powermenu.sh\")",
+    "opts": "",
+    "desc": "Power menu"
+  },
+  {
+    "combo": "SUPER + L",
+    "dispatcher": "hl.dsp.exec_cmd(\"hyprlock\")",
+    "opts": "",
+    "desc": "Lock screen"
+  },
+  {
+    "combo": "SUPER + slash",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/show-keybinds.sh\")",
+    "opts": "",
+    "desc": "Show keybinds"
+  },
+  {
+    "combo": "SUPER + SHIFT + E",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/hypr-config-editor.py\")",
+    "opts": "",
+    "desc": "Open config editor"
+  },
+  {
+    "combo": "SUPER + V",
+    "dispatcher": "hl.dsp.window.float({ action = \"toggle\" })",
+    "opts": "",
+    "desc": "Toggle floating"
+  },
+  {
+    "combo": "SUPER + F",
+    "dispatcher": "hl.dsp.exec_cmd(\"hyprctl dispatch fullscreen 0\")",
+    "opts": "",
+    "desc": "Toggle fullscreen"
+  },
+  {
+    "combo": "SUPER + P",
+    "dispatcher": "hl.dsp.window.pseudo()",
+    "opts": "",
+    "desc": "Toggle pseudotile"
+  },
+  {
+    "combo": "SUPER + J",
+    "dispatcher": "hl.dsp.layout(\"togglesplit\")",
+    "opts": "",
+    "desc": "Toggle split direction"
+  },
+  {
+    "combo": "SUPER + left",
+    "dispatcher": "hl.dsp.focus({ direction = \"left\" })",
+    "opts": "",
+    "desc": "Move focus left"
+  },
+  {
+    "combo": "SUPER + right",
+    "dispatcher": "hl.dsp.focus({ direction = \"right\" })",
+    "opts": "",
+    "desc": "Move focus right"
+  },
+  {
+    "combo": "SUPER + up",
+    "dispatcher": "hl.dsp.focus({ direction = \"up\" })",
+    "opts": "",
+    "desc": "Move focus up"
+  },
+  {
+    "combo": "SUPER + down",
+    "dispatcher": "hl.dsp.focus({ direction = \"down\" })",
+    "opts": "",
+    "desc": "Move focus down"
+  },
+  {
+    "combo": "SUPER + SHIFT + left",
+    "dispatcher": "hl.dsp.exec_cmd(\"hyprctl dispatch movewindow l\")",
+    "opts": "",
+    "desc": "Move window left"
+  },
+  {
+    "combo": "SUPER + SHIFT + right",
+    "dispatcher": "hl.dsp.exec_cmd(\"hyprctl dispatch movewindow r\")",
+    "opts": "",
+    "desc": "Move window right"
+  },
+  {
+    "combo": "SUPER + SHIFT + up",
+    "dispatcher": "hl.dsp.exec_cmd(\"hyprctl dispatch movewindow u\")",
+    "opts": "",
+    "desc": "Move window up"
+  },
+  {
+    "combo": "SUPER + SHIFT + down",
+    "dispatcher": "hl.dsp.exec_cmd(\"hyprctl dispatch movewindow d\")",
+    "opts": "",
+    "desc": "Move window down"
+  },
+  {
+    "combo": "SUPER + 1",
+    "dispatcher": "hl.dsp.focus({ workspace = 1 })",
+    "opts": "",
+    "desc": "Switch to workspace 1"
+  },
+  {
+    "combo": "SUPER + 2",
+    "dispatcher": "hl.dsp.focus({ workspace = 2 })",
+    "opts": "",
+    "desc": "Switch to workspace 2"
+  },
+  {
+    "combo": "SUPER + 3",
+    "dispatcher": "hl.dsp.focus({ workspace = 3 })",
+    "opts": "",
+    "desc": "Switch to workspace 3"
+  },
+  {
+    "combo": "SUPER + 4",
+    "dispatcher": "hl.dsp.focus({ workspace = 4 })",
+    "opts": "",
+    "desc": "Switch to workspace 4"
+  },
+  {
+    "combo": "SUPER + 5",
+    "dispatcher": "hl.dsp.focus({ workspace = 5 })",
+    "opts": "",
+    "desc": "Switch to workspace 5"
+  },
+  {
+    "combo": "SUPER + 6",
+    "dispatcher": "hl.dsp.focus({ workspace = 6 })",
+    "opts": "",
+    "desc": "Switch to workspace 6"
+  },
+  {
+    "combo": "SUPER + 7",
+    "dispatcher": "hl.dsp.focus({ workspace = 7 })",
+    "opts": "",
+    "desc": "Switch to workspace 7"
+  },
+  {
+    "combo": "SUPER + 8",
+    "dispatcher": "hl.dsp.focus({ workspace = 8 })",
+    "opts": "",
+    "desc": "Switch to workspace 8"
+  },
+  {
+    "combo": "SUPER + 9",
+    "dispatcher": "hl.dsp.focus({ workspace = 9 })",
+    "opts": "",
+    "desc": "Switch to workspace 9"
+  },
+  {
+    "combo": "SUPER + 0",
+    "dispatcher": "hl.dsp.focus({ workspace = 10 })",
+    "opts": "",
+    "desc": "Switch to workspace 10"
+  },
+  {
+    "combo": "SUPER + SHIFT + 1",
+    "dispatcher": "hl.dsp.window.move({ workspace = 1 })",
+    "opts": "",
+    "desc": "Move window to workspace 1"
+  },
+  {
+    "combo": "SUPER + SHIFT + 2",
+    "dispatcher": "hl.dsp.window.move({ workspace = 2 })",
+    "opts": "",
+    "desc": "Move window to workspace 2"
+  },
+  {
+    "combo": "SUPER + SHIFT + 3",
+    "dispatcher": "hl.dsp.window.move({ workspace = 3 })",
+    "opts": "",
+    "desc": "Move window to workspace 3"
+  },
+  {
+    "combo": "SUPER + SHIFT + 4",
+    "dispatcher": "hl.dsp.window.move({ workspace = 4 })",
+    "opts": "",
+    "desc": "Move window to workspace 4"
+  },
+  {
+    "combo": "SUPER + SHIFT + 5",
+    "dispatcher": "hl.dsp.window.move({ workspace = 5 })",
+    "opts": "",
+    "desc": "Move window to workspace 5"
+  },
+  {
+    "combo": "SUPER + SHIFT + 6",
+    "dispatcher": "hl.dsp.window.move({ workspace = 6 })",
+    "opts": "",
+    "desc": "Move window to workspace 6"
+  },
+  {
+    "combo": "SUPER + SHIFT + 7",
+    "dispatcher": "hl.dsp.window.move({ workspace = 7 })",
+    "opts": "",
+    "desc": "Move window to workspace 7"
+  },
+  {
+    "combo": "SUPER + SHIFT + 8",
+    "dispatcher": "hl.dsp.window.move({ workspace = 8 })",
+    "opts": "",
+    "desc": "Move window to workspace 8"
+  },
+  {
+    "combo": "SUPER + SHIFT + 9",
+    "dispatcher": "hl.dsp.window.move({ workspace = 9 })",
+    "opts": "",
+    "desc": "Move window to workspace 9"
+  },
+  {
+    "combo": "SUPER + SHIFT + 0",
+    "dispatcher": "hl.dsp.window.move({ workspace = 10 })",
+    "opts": "",
+    "desc": "Move window to workspace 10"
+  },
+  {
+    "combo": "SUPER + S",
+    "dispatcher": "hl.dsp.workspace.toggle_special(\"magic\")",
+    "opts": "",
+    "desc": "Toggle scratchpad"
+  },
+  {
+    "combo": "SUPER + SHIFT + S",
+    "dispatcher": "hl.dsp.window.move({ workspace = \"special:magic\" })",
+    "opts": "",
+    "desc": "Move window to scratchpad"
+  },
+  {
+    "combo": "SUPER + mouse_down",
+    "dispatcher": "hl.dsp.focus({ workspace = \"e+1\" })",
+    "opts": "",
+    "desc": "Cycle to next workspace"
+  },
+  {
+    "combo": "SUPER + mouse_up",
+    "dispatcher": "hl.dsp.focus({ workspace = \"e-1\" })",
+    "opts": "",
+    "desc": "Cycle to previous workspace"
+  },
+  {
+    "combo": "SUPER + mouse:272",
+    "dispatcher": "hl.dsp.window.drag()",
+    "opts": "{ mouse = true }",
+    "desc": "Drag window with mouse"
+  },
+  {
+    "combo": "SUPER + mouse:273",
+    "dispatcher": "hl.dsp.window.resize()",
+    "opts": "{ mouse = true }",
+    "desc": "Resize window with mouse"
+  },
+  {
+    "combo": "Print",
+    "dispatcher": "hl.dsp.exec_cmd(\"grim -g \\\"$(slurp)\\\" - | swappy -f -\")",
+    "opts": "",
+    "desc": "Screenshot region -> annotate"
+  },
+  {
+    "combo": "SUPER + Print",
+    "dispatcher": "hl.dsp.exec_cmd(\"grim - | swappy -f -\")",
+    "opts": "",
+    "desc": "Screenshot full -> annotate"
+  },
+  {
+    "combo": "SUPER + CTRL + S",
+    "dispatcher": "hl.dsp.exec_cmd(\"grim -g \\\"$(slurp)\\\" - | wl-copy\")",
+    "opts": "",
+    "desc": "Screenshot region -> clipboard"
+  },
+  {
+    "combo": "SUPER + C",
+    "dispatcher": "hl.dsp.exec_cmd(\"cliphist list | wofi --dmenu | cliphist decode | wl-copy\")",
+    "opts": "",
+    "desc": "Clipboard history"
+  },
+  {
+    "combo": "XF86AudioRaiseVolume",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/hypr-osd.sh vol-up\")",
+    "opts": "{ locked = true, repeating = true }",
+    "desc": "Volume up"
+  },
+  {
+    "combo": "XF86AudioLowerVolume",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/hypr-osd.sh vol-down\")",
+    "opts": "{ locked = true, repeating = true }",
+    "desc": "Volume down"
+  },
+  {
+    "combo": "XF86AudioMute",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/hypr-osd.sh vol-mute\")",
+    "opts": "{ locked = true, repeating = true }",
+    "desc": "Mute"
+  },
+  {
+    "combo": "XF86AudioMicMute",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/hypr-osd.sh mic-mute\")",
+    "opts": "{ locked = true, repeating = true }",
+    "desc": "Mic mute"
+  },
+  {
+    "combo": "XF86MonBrightnessUp",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/hypr-osd.sh bright-up\")",
+    "opts": "{ locked = true, repeating = true }",
+    "desc": "Brightness up"
+  },
+  {
+    "combo": "XF86MonBrightnessDown",
+    "dispatcher": "hl.dsp.exec_cmd(\"~/.local/bin/hypr-osd.sh bright-down\")",
+    "opts": "{ locked = true, repeating = true }",
+    "desc": "Brightness down"
+  },
+  {
+    "combo": "XF86AudioPlay",
+    "dispatcher": "hl.dsp.exec_cmd(\"playerctl play-pause\")",
+    "opts": "{ locked = true }",
+    "desc": "Play/pause media"
+  },
+  {
+    "combo": "XF86AudioPause",
+    "dispatcher": "hl.dsp.exec_cmd(\"playerctl play-pause\")",
+    "opts": "{ locked = true }",
+    "desc": "Play/pause media"
+  },
+  {
+    "combo": "XF86AudioNext",
+    "dispatcher": "hl.dsp.exec_cmd(\"playerctl next\")",
+    "opts": "{ locked = true }",
+    "desc": "Next track"
+  },
+  {
+    "combo": "XF86AudioPrev",
+    "dispatcher": "hl.dsp.exec_cmd(\"playerctl previous\")",
+    "opts": "{ locked = true }",
+    "desc": "Previous track"
+  }
+]

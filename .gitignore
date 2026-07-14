@@ -1,0 +1,9 @@
+# Regenerated from the .json sources by install.sh / the config editor
+# (SUPER+SHIFT+E) - never hand-edited, so not worth tracking.
+.config/hypr/keybinds.lua
+.config/hypr/appearance.lua
+.config/hypr/monitors.lua
+.config/hypr/keybinds.txt
+
+__pycache__/
+*.pyc

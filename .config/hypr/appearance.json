@@ -1,0 +1,16 @@
+{
+  "gaps_in": 4,
+  "gaps_out": 8,
+  "border_size": 2,
+  "active_color_1": "73ba25ee",
+  "active_color_2": "2fae87ee",
+  "gradient_angle": 45,
+  "inactive_color": "3a3f3caa",
+  "rounding": 8,
+  "blur_enabled": true,
+  "blur_size": 5,
+  "blur_passes": 2,
+  "shadow_enabled": true,
+  "active_opacity": 1.0,
+  "inactive_opacity": 0.95
+}

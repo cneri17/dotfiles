@@ -1,0 +1,133 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(13, 20, 17, 0.88);
+    border-radius: 12px;
+    border: 1px solid rgba(115, 186, 37, 0.35);
+    color: #e8e8e8;
+}
+
+#workspaces,
+#window,
+#clock,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#bluetooth,
+#backlight,
+#battery,
+#cpu,
+#tray,
+#custom-keybinds,
+#custom-confeditor,
+#custom-power {
+    padding: 0 10px;
+    margin: 4px 2px;
+}
+
+#custom-keybinds,
+#custom-confeditor {
+    color: #e0e0e0;
+    border-radius: 8px;
+}
+
+#custom-keybinds:hover,
+#custom-confeditor:hover {
+    background: rgba(115, 186, 37, 0.25);
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #7a8a80;
+    background: transparent;
+    border-radius: 8px;
+}
+
+#workspaces button.active {
+    color: #0d1411;
+    background: linear-gradient(45deg, #73ba25, #2fae87);
+}
+
+#workspaces button.empty {
+    color: #4a544d;
+}
+
+#workspaces button:hover {
+    background: rgba(115, 186, 37, 0.25);
+}
+
+#window {
+    color: #9fb0a6;
+    font-style: italic;
+}
+
+#clock {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#idle_inhibitor.activated {
+    color: #73ba25;
+}
+
+#pulseaudio,
+#network,
+#bluetooth,
+#backlight,
+#battery,
+#cpu {
+    color: #d8e0dc;
+}
+
+#pulseaudio.muted {
+    color: #7a8a80;
+}
+
+#network.disconnected {
+    color: #e06060;
+}
+
+#bluetooth.disabled {
+    color: #4a544d;
+}
+
+#battery.warning:not(.charging) {
+    color: #e0a030;
+}
+
+#battery.critical:not(.charging) {
+    color: #e05050;
+}
+
+#battery.charging {
+    color: #73ba25;
+}
+
+#tray {
+    padding: 0 8px;
+}
+
+#custom-power {
+    color: #e0e0e0;
+    padding: 0 12px;
+    margin-right: 4px;
+    border-radius: 8px;
+}
+
+#custom-power:hover {
+    background: rgba(224, 80, 80, 0.35);
+}
+
+tooltip {
+    background: rgba(13, 20, 17, 0.95);
+    border: 1px solid rgba(115, 186, 37, 0.5);
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #e8e8e8;
+}

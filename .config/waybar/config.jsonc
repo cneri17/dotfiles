@@ -1,0 +1,127 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "idle_inhibitor",
+        "pulseaudio",
+        "network",
+        "bluetooth",
+        "backlight",
+        "battery",
+        "cpu",
+        "tray",
+        "custom/keybinds",
+        "custom/confeditor",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "empty": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 40,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 5
+    },
+
+    "network": {
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": " {ipaddr}",
+        "format-disconnected": "⚠ offline",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "",
+        "format-connected": " {num_connections}",
+        "on-click": "blueman-manager"
+    },
+
+    "backlight": {
+        "format": " {percent}%",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{timeTo}, {power}W"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 5
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "custom/keybinds": {
+        "format": "⌨",
+        "on-click": "~/.local/bin/show-keybinds.sh",
+        "tooltip-text": "Show keybinds"
+    },
+
+    "custom/confeditor": {
+        "format": "",
+        "on-click": "~/.local/bin/hypr-config-editor.py",
+        "tooltip-text": "Edit Hyprland config"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "~/.local/bin/powermenu.sh",
+        "tooltip": false
+    }
+}
