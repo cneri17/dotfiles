@@ -10,7 +10,12 @@ git clone https://github.com/<your-username>/dotfiles.git ~/dotfiles
 ~/dotfiles/install.sh
 ```
 
-This symlinks everything under `.config/` and `.local/bin/` into the
+On openSUSE, this first installs every package these dotfiles expect via
+`zypper` (prompts for your sudo password once). On any other distro that
+step is skipped with a note - see Prerequisites below and install them by
+hand with your own package manager.
+
+It then symlinks everything under `.config/` and `.local/bin/` into the
 matching path under `$HOME` (backing up any existing file as `.bak`), then
 regenerates `keybinds.lua` / `appearance.lua` / `monitors.lua` from their
 `.json` sources. Re-running it is safe.

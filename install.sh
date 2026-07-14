@@ -6,6 +6,21 @@ set -eu
 
 REPO="$(cd "$(dirname "$0")" && pwd)"
 
+# openSUSE-specific: install every package these dotfiles assume is present.
+# Package names verified against a working machine via `rpm -qf` on each
+# binary, not guessed. On any other distro this just skips with a note -
+# see README.md for the general prerequisite list to translate by hand.
+if command -v zypper >/dev/null 2>&1; then
+    echo "Installing required packages via zypper (will prompt for your sudo password)..."
+    sudo zypper --non-interactive install \
+        pavucontrol NetworkManager-connection-editor blueman grim slurp swappy \
+        wl-clipboard cliphist brightnessctl playerctl wireplumber hypridle hyprlock \
+        hyprpaper waypaper kitty wofi mako hyprland waybar yazi python313-tk
+else
+    echo "zypper not found - skipping package install (not openSUSE?)."
+    echo "See README.md for the list of packages these dotfiles expect."
+fi
+
 link() {
     src="$1"
     dst="$HOME/${src#"$REPO"/}"
