@@ -43,6 +43,7 @@ fi
 if command -v papirus-folders >/dev/null 2>&1; then
     papirus-folders -C green -t Papirus-Dark
 fi
+sh "$REPO/.local/bin/papirus-recolor-folders.sh"
 
 link() {
     src="$1"
