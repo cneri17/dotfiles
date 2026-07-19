@@ -17,6 +17,7 @@
         "backlight",
         "battery",
         "cpu",
+        "custom/updates",
         "tray",
         "custom/keybinds",
         "custom/confeditor",
@@ -105,6 +106,16 @@
     "tray": {
         "icon-size": 16,
         "spacing": 8
+    },
+
+    "custom/updates": {
+        "format": " {}",
+        "exec": "~/.local/bin/check-updates.sh",
+        "return-type": "json",
+        "interval": 900,
+        "on-click": "kitty -e bash -c 'sudo zypper dup; pkill -RTMIN+8 waybar'",
+        "on-click-right": "kitty -e bash -c 'sudo zypper ref; pkill -RTMIN+8 waybar'",
+        "signal": 8
     },
 
     "custom/keybinds": {

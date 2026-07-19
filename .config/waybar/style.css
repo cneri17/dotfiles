@@ -107,6 +107,38 @@ window#waybar {
     color: #73ba25;
 }
 
+#custom-updates {
+    color: #9fb0a6;
+    background: rgba(159, 176, 166, 0.12);
+    border: 1px solid rgba(159, 176, 166, 0.25);
+    border-radius: 999px;
+    padding: 0 14px;
+    margin: 4px 4px;
+    font-weight: 600;
+}
+
+#custom-updates.has-updates {
+    color: #0d1411;
+    background: linear-gradient(45deg, #73ba25, #2fae87);
+    border-color: transparent;
+}
+
+#custom-updates.no-updates {
+    color: #4a544d;
+    background: rgba(74, 84, 77, 0.15);
+    border-color: transparent;
+}
+
+#custom-updates.error {
+    color: #ffffff;
+    background: rgba(224, 80, 80, 0.5);
+    border-color: transparent;
+}
+
+#custom-updates:hover {
+    opacity: 0.85;
+}
+
 #tray {
     padding: 0 8px;
 }
