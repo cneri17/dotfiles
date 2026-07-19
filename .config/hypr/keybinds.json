@@ -13,7 +13,7 @@
   },
   {
     "combo": "SUPER + E",
-    "dispatcher": "hl.dsp.exec_cmd(\"kitty -e yazi\")",
+    "dispatcher": "hl.dsp.exec_cmd(\"thunar\")",
     "opts": "",
     "desc": "File manager"
   },

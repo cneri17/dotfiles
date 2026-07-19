@@ -15,10 +15,33 @@ if command -v zypper >/dev/null 2>&1; then
     sudo zypper --non-interactive install \
         pavucontrol NetworkManager-connection-editor blueman grim slurp swappy \
         wl-clipboard cliphist brightnessctl playerctl wireplumber hypridle hyprlock \
-        hyprpaper waypaper kitty wofi mako hyprland waybar yazi python313-tk
+        hyprpaper waypaper kitty wofi mako hyprland waybar yazi python313-tk \
+        thunar papirus-icon-theme papirus-folders sassc
 else
     echo "zypper not found - skipping package install (not openSUSE?)."
     echo "See README.md for the list of packages these dotfiles expect."
+fi
+
+# Deep-black/green GTK theme for Thunar etc. Graphite isn't packaged for
+# openSUSE, so it's built from source into a cache dir outside the repo
+# (idempotent - re-running just re-clones/re-installs the same variant).
+# gtk-3.0/gtk-4.0 settings.ini (tracked below, under .config/) point at the
+# resulting "Graphite-green-Dark" theme name and Papirus-Dark icons.
+if command -v git >/dev/null 2>&1 && command -v sassc >/dev/null 2>&1; then
+    GRAPHITE_SRC="$HOME/.cache/dotfiles-vendor/Graphite-gtk-theme"
+    mkdir -p "$(dirname "$GRAPHITE_SRC")"
+    if [ -d "$GRAPHITE_SRC" ]; then
+        git -C "$GRAPHITE_SRC" pull --ff-only
+    else
+        git clone --depth=1 https://github.com/vinceliuice/Graphite-gtk-theme.git "$GRAPHITE_SRC"
+    fi
+    "$GRAPHITE_SRC/install.sh" -t green -c dark --tweaks black -l
+else
+    echo "git/sassc not found - skipping Graphite GTK theme install."
+fi
+
+if command -v papirus-folders >/dev/null 2>&1; then
+    papirus-folders -C green -t Papirus-Dark
 fi
 
 link() {
