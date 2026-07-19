@@ -13,7 +13,7 @@
   },
   {
     "combo": "SUPER + E",
-    "dispatcher": "hl.dsp.exec_cmd(\"thunar\")",
+    "dispatcher": "hl.dsp.exec_cmd(\"env -u GTK_THEME thunar\")",
     "opts": "",
     "desc": "File manager"
   },
