@@ -134,6 +134,11 @@ hl.window_rule({ name = "float-nm-editor",   match = { class = "^(nm-connection-
 hl.window_rule({ name = "float-xarchiver",   match = { class = "^(xarchiver)$" },         float = true })
 hl.window_rule({ name = "float-identify-osd", match = { class = "^(identify-osd)$" }, float = true, pin = true, size = "25% 20%" })
 
+-- Center every floating window (save dialogs, VS Code's git confirmation
+-- popups, file pickers, etc.) so they don't get lost in a corner of the
+-- ultrawide monitor.
+hl.window_rule({ name = "center-floating", match = { float = true }, center = true })
+
 hl.window_rule({
     name  = "fix-xwayland-drags",
     match = {
