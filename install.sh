@@ -16,7 +16,7 @@ if command -v zypper >/dev/null 2>&1; then
         pavucontrol NetworkManager-connection-editor blueman grim slurp swappy \
         wl-clipboard cliphist brightnessctl playerctl wireplumber hypridle hyprlock \
         hyprpaper waypaper kitty wofi mako hyprland waybar yazi python313-tk \
-        thunar papirus-icon-theme papirus-folders sassc
+        thunar papirus-icon-theme papirus-folders sassc jq
 else
     echo "zypper not found - skipping package install (not openSUSE?)."
     echo "See README.md for the list of packages these dotfiles expect."

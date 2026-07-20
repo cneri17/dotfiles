@@ -56,6 +56,8 @@ Core:
   `SUPER+SHIFT+E` config editor GUI
 - `papirus-icon-theme`, `papirus-folders`, `sassc`, `git` - GTK theme (see
   below)
+- `jq` - required by `.local/bin/check-updates.sh`, waybar's update-count
+  widget
 
 Used by specific keybinds (edit `keybinds.json` to drop any you don't
 want):
