@@ -26,7 +26,7 @@
     ],
 
     "hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "{icon}{windows}",
         "on-click": "activate",
         "format-icons": {
             "default": "",
@@ -35,7 +35,15 @@
         },
         "persistent-workspaces": {
             "*": 5
-        }
+        },
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "class<Code>": "",
+            "class<google-chrome>": "",
+            "class<firefox>": "",
+            "class<kitty>": ""
+        },
+        "format-window-separator": " "
     },
 
     "hyprland/window": {
