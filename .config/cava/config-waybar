@@ -1,0 +1,15 @@
+# Cava config for the waybar visualizer module (.local/bin/waybar-cava.sh).
+# Kept separate from the main ~/.config/cava/config so it doesn't interfere
+# with the full-screen visualizer setup.
+
+[general]
+mode = normal
+framerate = 60
+bars = 10
+
+[output]
+method = raw
+raw_target = /dev/stdout
+data_format = ascii
+ascii_max_range = 7
+bar_delimiter = 59

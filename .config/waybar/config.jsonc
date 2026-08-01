@@ -11,6 +11,7 @@
     "modules-center": ["clock"],
     "modules-right": [
         "idle_inhibitor",
+        "custom/cava",
         "pulseaudio",
         "network",
         "bluetooth",
@@ -116,6 +117,12 @@
         "on-click": "kitty -e bash -c 'sudo zypper dup; pkill -RTMIN+8 waybar'",
         "on-click-right": "kitty -e bash -c 'sudo zypper ref; pkill -RTMIN+8 waybar'",
         "signal": 8
+    },
+
+    "custom/cava": {
+        "exec": "~/.local/bin/waybar-cava.sh",
+        "tail": true,
+        "tooltip": false
     },
 
     "custom/keybinds": {

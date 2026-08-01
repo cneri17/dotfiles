@@ -24,9 +24,17 @@ window#waybar {
 #tray,
 #custom-keybinds,
 #custom-confeditor,
+#custom-cava,
 #custom-power {
     padding: 0 10px;
     margin: 4px 2px;
+}
+
+#custom-cava {
+    font-family: monospace;
+    font-size: 14px;
+    color: #73ba25;
+    letter-spacing: 1px;
 }
 
 #custom-keybinds,
