@@ -9,6 +9,10 @@
 -- generated into monitors.lua from monitors.json - do not edit that file by hand
 require("monitors")
 
+-- Pin workspaces to monitors (by description, so it survives DP-3/DP-4
+-- renumbering on resume). Not GUI-managed - hand-edit workspaces.lua directly.
+require("workspaces")
+
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
@@ -40,6 +44,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
+    hl.exec_cmd("$HOME/.config/eww/dashboard/launch_dashboard")
 end)
 
 -----------------------
@@ -138,6 +143,11 @@ hl.window_rule({ name = "float-identify-osd", match = { class = "^(identify-osd)
 -- popups, file pickers, etc.) so they don't get lost in a corner of the
 -- ultrawide monitor.
 hl.window_rule({ name = "center-floating", match = { float = true }, center = true })
+
+-- The Xeneon Edge only hosts the eww dashboard (layer-shell, unaffected by
+-- windowrules) - send every regular app window to the main monitor instead
+-- of wherever the mouse/focus happens to be when it's launched.
+hl.window_rule({ name = "apps-to-main-monitor", match = { class = ".*" }, monitor = "desc:Samsung Electric Company Odyssey G95NC" })
 
 hl.window_rule({
     name  = "fix-xwayland-drags",
