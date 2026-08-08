@@ -108,6 +108,17 @@ hl.gesture({
     action    = "workspace",
 })
 
+-- Xeneon Edge touchscreen: the controller (wch.cn TouchScreen) exposes two
+-- logical devices - a real absolute touch interface (event12, tagged
+-- INPUT_PROP_DIRECT) and a bogus relative one (event8, tagged as a plain
+-- mouse) that libinput otherwise treats as a low-DPI pointer. Without an
+-- explicit output binding, the touch device's absolute coordinate range
+-- maps across the whole virtual layout (both monitors) rather than just its
+-- own panel, so taps land nowhere near the finger - bind it to its actual
+-- physical output.
+hl.device({ name = "wch.cn-touchscreen-1", enabled = false })
+hl.device({ name = "wch.cn-touchscreen", output = "HDMI-A-2" })
+
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
