@@ -42,7 +42,10 @@
             "class<Code>": "",
             "class<google-chrome>": "",
             "class<firefox>": "",
-            "class<kitty>": ""
+            "class<kitty>": "",
+            "class<thunar>": "",
+            "class<winboat>": "",
+            "class<steam>": ""
         },
         "format-window-separator": " "
     },
